@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class main{
+
+    public static void main(String[] args){
+        Scanner scanner =  new Scanner(System.in);
+
+        System.out.println("What is your name? ");
+        String name = scanner.nextLine();
+
+        if(name.trim() .isEmpty()){
+            System.out.println("Hey! You never input anything.");
+            System.out.println("Please input your name:");
+            scanner.nextLine();
+        }
+
+        System.out.println("What is your age? ");
+        int age = scanner.nextInt();
+
+
+        System.out.println("Is the person adult?");
+       scanner.nextBoolean();
+
+         int ageLimit = 19;
+
+        if (age >= ageLimit ){
+
+            System.out.println("yes it is! ");
+        }
+    else{
+        System.out.println("No age is just: " + age);
+        }
+
+        scanner.close();
+
+
+
+
+
+    }
+
+}

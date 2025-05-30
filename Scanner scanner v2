@@ -1,0 +1,125 @@
+
+import com.sun.security.jgss.GSSUtil;
+
+/*import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args){
+
+        /*This simple program will ask the user their creds like
+        * name and birthday then the program will compute the birthday
+        *  of the user and give them their age base on the given creds
+        * of the user
+        */
+
+  /*      Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter your name:");
+        String name = input.nextLine();
+
+        if(name.trim() .isEmpty()) {
+            System.out.println("You did not input your name, Input again");
+            name = input.nextLine();
+            System.out.println("Hi! " + name + " would you like to compute your birthday to see your age?");
+        }
+        else{
+            System.out.println("Hi! " + name + " would you like to compute your birthday?");
+
+        }
+        char yes = 'Y';
+        char no = 'N';
+
+        System.out.println("Type Y for yes and N for no");
+
+        char entry = input.next().charAt(0);
+            if(entry == yes){
+                System.out.print("lets proceed!");
+            }
+            else{
+                System.out.print("K Bye, pang abala pota!");
+                return;
+            }
+
+
+        System.out.println("Enter your Birthday accordingly");
+
+        System.out.print("Date of Birth: ");
+        int dateOfBirthday = input.nextInt();
+
+        System.out.print("Birth Month:");
+        String birthMonth  = input.nextLine();
+
+        input.nextLine();
+
+        System.out.print("Birth year:");
+        int birthYear = input.nextInt();
+
+         int age = (2025 - birthYear );
+
+        System.out.println("So your birthday is: " + dateOfBirthday + birthMonth + birthYear + " and your age is:" + age);
+
+input.close();
+
+    }
+
+}
+
+/*========================================================================================================================================================================================*/
+
+
+*/
+
+
+
+import java.util.Scanner;
+
+//Program made by claude
+//a refine version of previous code
+
+public class main {  // Changed from 'main' to 'Main'
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Ask for name
+        System.out.println("Enter your name:");
+        String name = input.nextLine();
+
+        // Check if name is empty
+        if (name.trim().isEmpty()) {
+            System.out.println("You did not input your name. Input again:");
+            name = input.nextLine();
+        }
+
+        // Greet and ask if they want to continue
+        System.out.println("Hi " + name + "! Would you like to compute your birthday?");
+        System.out.println("Type Y for yes and N for no");
+
+        char entry = input.next().charAt(0);
+        if (entry == 'Y' || entry == 'y') {  // Now accepts both Y and y
+            System.out.println("Let's proceed!");
+
+            // Get birthday details
+            System.out.print("Date of Birth (1-31): ");
+            int dateOfBirthday = input.nextInt();
+
+            System.out.print("Birth Month (1-12): ");
+            int birthMonth = input.nextInt();  // Changed to int for easier handling
+
+            System.out.print("Birth year: ");
+            int birthYear = input.nextInt();
+
+            int age = 2025 - birthYear;
+
+            // Display results with better formatting
+            System.out.println("Your birthday is: " + dateOfBirthday + "/" +
+                    birthMonth + "/" + birthYear);
+            System.out.println("Your age is: " + age);
+        } else {
+            System.out.println("Goodbye! Have a nice day!");
+        }
+
+        input.close();
+    }
+}
+

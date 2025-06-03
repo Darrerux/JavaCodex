@@ -1,0 +1,20 @@
+class MultiDimArrayDemo {
+    public static void main(String[] args) {
+
+      //Here is the example of Multidimensional Array
+      String[][] names = {
+                {"Darrel ", "Michelle ", "klyzian "},
+                {"R. ", "I. ", "O. "},
+                {"Ituralde", "Bellen", "Ruiz"}
+        };
+
+        //Print the Elements in the array
+        //It works like rows and columns
+        //Imagine a Multiplication Tables
+        System.out.println("This is the eldest: " + names[0][0] + names[1][1] + names[2][0]);
+        System.out.println("This is Second to the Eldest: " + names[0][1] + names[1][2] + names[2][0]);
+        System.out.println("And this is the youngest: " + names[0][2] + names[1][0] + names[2][1]);
+
+
+    }
+}

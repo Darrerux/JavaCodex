@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // Helper method to prompt user for input and return it
+    private static String getUserInput(Scanner scanner, String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
+    public static void main(String[] args) {
+        // Use try-with-resources to ensure the scanner is closed automatically
+        try (Scanner scanner = new Scanner(System.in)) {
+
+            //Creating variables and getting input using the helper method
+            String noun1 = getUserInput(scanner, "Enter your first noun here:");
+            String noun2 = getUserInput(scanner, "Enter your second noun here:");
+            String noun3 = getUserInput(scanner, "Enter your third noun here:");
+
+            String verb1 = getUserInput(scanner, "Let's create your first verb:");
+            String verb2 = getUserInput(scanner, "Let's create your second verb:");
+
+            String adjective1 = getUserInput(scanner, "Now it's time to create your adjective. Enter here:");
+            String adjective2 = getUserInput(scanner, "Now the second one:");
+
+            //Initializing the main story
+            String story = String.format("""
+                    Once upon a time there were two friends: %s and the other one was called: %s.
+                    They lived in a place where the sun blazed during the day and it was super cold at night. That place was called: %s.
+                    As they grew older, they %s and %s hidden treasures. With the %s, they dug so deep they saw %s
+                    objects that seemed to be the core of the planet. They died, by the way.""",
+                    noun1, noun2, noun3, verb1, verb2, adjective1, adjective2);
+
+            System.out.println(story);
+
+        } // Scanner is automatically closed here thanks to try-with-resources
+    }
+}

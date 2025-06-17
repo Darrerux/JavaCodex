@@ -1,0 +1,29 @@
+
+//Breaking down the problem:
+//Kids under 13 has a special discount
+//Same as 65 or senior
+// standard payment if not belong to that category
+import java.util.Scanner;
+public
+class ageChecker{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); //creating new object
+
+        System.out.println("Welcome to Movie Theather!");
+        System.out.println("To avail special discounts, Please enter your age:");
+        int ageDiscount = scanner.nextInt();
+
+        if(ageDiscount < 13){
+            System.out.print("child Discount");
+        }
+else if(ageDiscount > 65){
+
+    System.out.println("Senior Discount");
+        }
+else{
+    System.out.println("Standard Discount");
+        }
+
+    }
+}

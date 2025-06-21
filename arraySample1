@@ -1,0 +1,28 @@
+/*
+* This program intended to find the smallest number within the given array.
+* lets break the problem to the smallest one.
+* The given array of integers is 5,3,8,2,1,9,4.
+* */
+
+class arraySample{
+    public static void main(String[] args){
+
+        //Declaring and initializing the array using one line declaration
+        int[] arrayNumbers = {5, 3, 8, 2, 1, 9, 4};
+
+
+        //Creating variable for the smallest value in the array
+        int smallestValue = arrayNumbers[0];
+
+        //Now were going to create a conditional statement
+        //baseline is 0 if i lesser than the array
+        for (int arrayNumber : arrayNumbers) {
+            if (smallestValue > arrayNumber) {
+                smallestValue = arrayNumber;
+            }
+        }
+        System.out.println("this is the smallest value in the array:" + smallestValue);
+    }
+
+
+}
